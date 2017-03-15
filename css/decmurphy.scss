@@ -1,0 +1,161 @@
+$hue: 355;
+$first-color: hsl($hue, 100%, 50%);
+$second-color: complement($first-color);
+
+@function isCoolColor($color) {
+    @return hue($color) < 300 and hue($color) > 120;
+}
+
+@function isHighKeyValue($color) {
+    @return hue($color) > 30 and hue($color) < 140;
+}
+
+@function harmoniousMix($mix, $base) {
+    @if (isCoolColor($mix)){
+        @if isHighKeyValue($base) {
+            @return mix($mix, $base, 11%);
+        }
+        @else {
+            @return mix($mix, $base, 16%);
+        }
+    }
+    @else {
+        @if isHighKeyValue($base) {
+            @return mix($mix, $base, 13%);
+        }
+        @else {
+            @return mix($mix, $base, 23%);
+        }
+    }
+}
+
+@function mixNeutral($color) {
+	@if (is-highest-key-value($color)) {
+		@if is-high-key-value(complement($color)) {
+			@return mix(complement($color), $color, 19%);
+		}
+		@else {
+			@return mix(complement($color), $color, 13%);
+		}
+	}
+	@else if (is-high-key-value($color)) {
+		@if is-high-key-value(complement($color)) {
+			@return mix(complement($color), $color, 31%);
+		}
+		@else {
+			@return mix(complement($color), $color, 23%);
+		}
+	}
+	@else {
+		@if is-highest-key-value(complement($color)) {
+			@return mix(complement($color), $color, 31%);
+		}
+		@if is-high-key-value(complement($color)) {
+			@return mix(complement($color), $color, 26%);
+		}
+		@else {
+			@return mix(complement($color), $color, 23%);
+		}
+	}
+}
+
+$mixed1: harmoniousMix($first-color, $second-color);
+$mixed2: harmoniousMix($second-color, $first-color);
+$neutral1: mixNeutral($mixed1);
+$neutral2: mixNeutral($mixed2);
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    font-style: normal;
+    src: url(../fonts/Brandon\ Grotesque\ Medium.otf) format('opentype');
+}
+* {
+    flex: 1;
+}
+html {
+    font-family: 'Brandon Grotesque', sans-serif !important;
+}
+body {
+    margin: 0px;
+    width: 100% !important;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.row {
+    flex-flow: row nowrap;
+}
+.column {
+    flex-flow: column nowrap;
+}
+
+.section {
+    height: 100vh;
+    width: 100%;
+}
+.section:nth-child(even) {
+    color:$second-color;
+    background-color:$neutral2;
+    .box {
+        text-align:center;
+        border: solid $mixed1;
+        border-radius: 5%;
+    }
+}
+.section:nth-child(odd) {
+    color:$first-color;
+    background-color:$neutral1;
+    .box {
+        text-align:center;
+        border: solid $mixed2;
+        border-radius: 5%;
+    }
+}
+
+.icon {
+    font-size: 5em;
+}
+
+.center {
+    text-align:center;
+}
+
+#lander {
+    font-size: 1.5em;
+    flex-direction: row;
+}
+
+.profiler {
+    content:url("../images/profile2.jpg");
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+@media only screen and (max-device-width: 480px) {
+    #lander {
+        flex-direction: column;
+        font-size: 1em;
+        text-align: center;
+    }
+    .profiler {
+        max-width: 67%;
+    }
+}
+
+
+
+.flex1 {flex: 1;}
+.flex2 {flex: 2;}
+.flex3 {flex: 3;}
+.flex4 {flex: 4;}
+.flex5 {flex: 5;}
+.flex6 {flex: 6;}
+.flex7 {flex: 7;}
+.flex8 {flex: 8;}
+.flex9 {flex: 9;}
+.flex10 {flex: 10;}
+.flex11 {flex: 11;}
+.flex12 {flex: 12;}
