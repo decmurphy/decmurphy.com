@@ -1,7 +1,7 @@
 <?php
 
 	$errors = '';
-	$myemail = "murphd37@tcd.ie";
+	$myemail = 'murphd37@tcd.ie';
 
 	if(empty($_POST['name'])  || empty($_POST['email']) || empty($_POST['message']))
 	{
@@ -21,15 +21,13 @@
 	if( empty($errors))
 	{
 		$to = $myemail;
-		$email_subject = $subject;
-		$email_body = "From: $name ($email_address)\r\n\n";
-		$email_body .= "___________________________________________________\r\n\n";
-		$email_body .= "$message\r\n\n";
-		$headers = "From: webmaster@decmurphy.com\r\n";
-		$headers .= "ReplyTo: $email_address\r\n";
+		$email_subject = "$subject";
+		$email_body = "From: $name \n ($email_address) \n\n $message";
+		$headers = "From: $myemail\n";
+		$headers .= "Reply-To: $email_address";
 		mail($to,$email_subject,$email_body,$headers);
 		//redirect to the 'thank you' page
-		header("Location: ../contact-form-thankyou.html");
+		header('Location: ../contact-form-thankyou.html');
 	}
 
 ?>

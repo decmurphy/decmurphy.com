@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /images/
+Disallow: /css/
+Disallow: /icons/
+Disallow: /js/
+Disallow: /php/
+Disallow: /scripts/
+Disallow: /contact-form-thankyou.html
+Disallow: /LICENSE.txt
+Disallow: /*pdf
+Allow: /

@@ -4,71 +4,71 @@ mobile style
 */
 @media 
 only screen and (max-width: 768px) {
-  
-  /* Removing whitespace around nav */
-  .navbar {
-    margin-bottom: 0px;
-  }
-  
-  .navbar-collapse {
-    padding-left: 0;
-    padding-right: 0;
-    border-bottom: 2px #BBB solid;
-  }
 
-  /* Turns tabs list into finite height scrollable list */
-  #tabs {
-    max-height: 400px;
-    overflow-y: scroll;
-  }
-  
-  /* White text in tabs list */
-  .navbar-default .navbar-nav>li>a {
-    color: #BBB;
-  }
-  
-  ul li {
-    width: 100%;
-    display: block;
-  }
-
-  /* Force equal width input boxes */
-  .input-group {
-    width: 100%;
-  }
-    
-  /* Keep form from moving when menu drops down */
-  form {
-    position: absolute;
-    width: 100%;
-    top: 80px;
-  }
-  
-    form button {
-      font-size: 24px !important;
+    /* Removing whitespace around nav */
+    .navbar {
+        margin-bottom: 0px;
     }
 
-  #bgvid { 
-    position: fixed; left: 0; top: 0;
-    max-width: 100%; min-height: 0;
-    width: auto; height: auto; z-index: -100;
-    background: url(polina.jpg) no-repeat;
-    background-size: cover; 
-  }
-  
-  .results td {
-    width: 100%;
-  }
-  
+    .navbar-collapse {
+        padding-left: 0;
+        padding-right: 0;
+        border-bottom: 2px #BBB solid;
+    }
+
+    /* Turns tabs list into finite height scrollable list */
+    #tabs {
+        max-height: 400px;
+        overflow-y: scroll;
+    }
+
+    /* White text in tabs list */
+    .navbar-default .navbar-nav>li>a {
+        color: #BBB;
+    }
+
+    ul li {
+        width: 100%;
+        display: block;
+    }
+
+    /* Force equal width input boxes */
+    .input-group {
+        width: 100%;
+    }
+
+    /* Keep form from moving when menu drops down */
+    form {
+        position: absolute;
+        width: 100%;
+        top: 80px;
+    }
+
+    form button {
+        font-size: 24px !important;
+    }
+
+    #bgvid { 
+        position: fixed; left: 0; top: 0;
+        max-width: 100%; min-height: 0;
+        width: auto; height: auto; z-index: -100;
+        background: url(polina.jpg) no-repeat;
+        background-size: cover; 
+    }
+
+    .results td {
+        width: 100%;
+    }
+
 }
 
 @media 
 only screen and (max-height: 900px) {
-  
-  .footer {
-		position: absolute;
-		top: -9999px;
-		left: -9999px;  
-  }
-  
+
+    .footer {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;  
+    }
+
 }
