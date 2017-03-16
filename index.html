@@ -5,100 +5,178 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/decmurphy.css">
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
     </head>
     <body>
-        <div id="lander" class="container section">
-            <span></span>
-            <span class="center flex4">
-                <img src="" class="profiler" alt="Profile" />
-            </span>
-            <span></span>
-            <div class="column flex6">
-                <div>
-                    <h1>Hi. I'm Declan Murphy</h1>
-                </div>
-                <p>Physicist, Software Engineer, Developer</p>
-            </div>
-        </div>
-        <div class="container section column">
-            <div class="container flex2">
+        <div style="width:95%;">
+            <div id="lander" class="container section">
                 <span></span>
-                <div class="flex2 box">
-                    <h1>My education is one of a kind</h1>
-                    <p>A background in mathematics and physics has provided me with a unique 'first principles' method of approaching problem-solving. Applying this method to programming gives me a mental edge over other developers.</p>
-                </div>
+                <span class="center flex4">
+                    <img src="" class="profiler" alt="Profile" />
+                </span>
                 <span></span>
-            </div>
-            <div class="container flex3">
-                <div class="box" style="max-width:30%">
-                    <span class="icon fa fa-superscript"></span>
-                    <h3><a href="http://www.tcd.ie/Physics/undergraduate/theoretical/">B.A. Theoretical Physics</a></h3>
-                    <h5>Sept '09 &#10140; June '13</h5>
-                    <p>4 years in Trinity College, Dublin earned me a Bachelor's degree and a Non-Foundation Scholarship - putting me in the top 2% of academics in the University.</p>
-                </div>
-                <div class="box" style="max-width:30%">
-                    <span class="icon fa fa-code"></span>
-                    <h3><a href="http://www.maths.tcd.ie/hpcmsc/index.php">MSc. High Performance Computing</a></h3>
-                    <h5>Sept '13 &#10140; Sept '14</h5>
-                    <p>My limited experience with computing software and hardware exploded over the next 12 months into the realms of parallel computing in C and C++.</p>
+                <div class="column flex6">
+                    <div>
+                        <h1>Hi. I'm Declan Murphy</h1>
+                    </div>
+                    <p>Physicist, Software Engineer, Developer</p>
                 </div>
             </div>
-        </div>
-        <div class="container section column">
-            <div class="container flex2">
-                <span></span>
-                <div class="flex3 box">
-                    <h1>But I've taught myself too</h1>
-                    <p>
-                        In fact I've taught myself most of what I know. 
-                        Version control with git.
-                        Server management on Digital Ocean and CDN usage with Cloudflare.
-                        Deploying on Tomcat. Data with MySQL.
-                        Java in the back, HTML5, SCSS, AngularJS up front and everything REST-ing in between (see what I did there?)
-                    </p>
+            <div class="container section column">
+                <div class="header1 container flex1 column">
+                    <div style="width:50%;text-align:left">
+                        <h1>Who am I?</h1>
+                    </div>
                 </div>
-                <span></span>
+                <div class="header2 container flex1 column">
+                    <div style="width:100%;text-align:left">
+                        <p>Declan Murphy. I just told you.</p>
+                    </div>
+                </div>
+                <div class="container flex5 column" style="width:90%;">
+                    <div class="container row">
+                        <div class="container column">
+                            <p>
+                                I'm a keen traveller. I recently spent 8 months travelling solo through Central America,
+                                from Cuba to Costa Rica (via Disneyworld which was the best thing EVER!), although this was my first big trip. 
+                                It absolutely won't be my last.
+                            </p>
+                            <p>
+                                Have you ever been to Mexico? Go to Mexico. Take me with you.
+                            </p>
+                        </div>
+                        <div class="container column">
+                            <span class="icon fa fa-globe fa-5x"></span>
+                        </div>
+                    </div>
+                    <div class="container row">
+                        <div class="container column">
+                            <span class="icon fa fa-futbol-o fa-5x"></span>
+                        </div>
+                        <div class="container column">
+                            <p>
+                                I'm a huge rugby fan. I played in the JCT Final for my school, Gonzaga. Nobody knows what
+                                the result was, so don't ask. We probably won. Then I captained the Panthers for 2 years in 
+                                the same school. These days it's mostly tag rugby, as other rugby players continued to grow in
+                                size while I did not
+                            </p>
+                            <p>
+                                There's no rugby ball in Font Awesome. Just pointing that out. Why am I even using this font?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="container row">
+                        <div class="container column">
+                            <p>
+                                Honestly, I'm a huge space nerd. Mostly spaceflight, like rocket launches and stuff. I'm an avid
+                                follower of SpaceX in particular and I moderate the SpaceX forum on reddit (currently >100,000 users)
+                                and I've created rocket launch simulators to help people visualise their missions.
+                            </p>
+                        </div>
+                        <div class="container column">
+                            <span class="icon fa fa-space-shuttle fa-5x"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="container flex3">
-                <div class="box">
-                    <span class="icon fa fa-rocket"></span>
-                    <h3><a href="https://www.flightclub.io/">Flight Club</a></h3>
-                    <h5>My pride and glory</h5>
-                    <p>
-                        A simulator and trajectory visualiser for rocket launches and landings.
-                    </p>
-                    <ul>
-                        <li>A Java+MySQL backend built with Maven and Hibernate, served on Apache Tomcat.</li>
-                        <li>An Angular Material frontend built with Gulp. </li>
-                        <li>Plots built with Plotly.js and flot.js. </li>
-                        <li>3D views built with Cesium.js. </li>
-                        <li>A RESTful API connecting everything together, using Google GSON to parse requests on the server.</li>
-                    </ul>
+            <div class="container section column">
+                <div class="header1 container flex1 column">
+                    <div style="width:50%;text-align:left">
+                        <h1>My education is one of a kind</h1>
+                    </div>
+                </div>
+                <div class="header2 container flex1 column">
+                    <div style="width:100%;text-align:left">
+                        <p>A background in mathematics and physics has provided me with a unique 'first principles' method of approaching problem-solving. Applying this method to programming gives me a mental edge over other developers.</p>
+                    </div>
+                </div>
+                <div class="container flex5 column" style="width:90%;">
+                    <div class="container row" style="width:100%">
+                        <span class="icon fa fa-superscript fa-5x flex2"></span>
+                        <div class="container column flex3" style="text-align:left">
+                            <h2 style="width:100%"><a href="http://www.tcd.ie/Physics/undergraduate/theoretical/">B.A. Theoretical Physics</a></h2>
+                            <h4 style="width:100%;margin:0">Trinity College, Dublin</h4>
+                            <h4 style="width:100%;margin:0">Sept '09 &#10140; June '13</h4>
+                        </div>
+                        <div class="container column flex7">
+                            <p style="width:100%;">
+                                4 years in Trinity College, Dublin earned me a Bachelor's degree and a Non-Foundation Scholarship - putting me in the top 2% of academics in the University
+                            </p>
+                            <p style="width:100%;">                        
+                                This education has given me a strong mathematics background and an effective first principles view for problem solving
+                            </p>
+                        </div>
+                    </div>
+                    <div class="container row" style="width:100%">
+                        <span class="icon fa fa-code fa-5x flex2"></span>
+                        <div class="container column flex3" style="text-align:left">
+                            <h2 style="width:100%"><a href="http://www.maths.tcd.ie/hpcmsc/index.php">MSc. High Performance Computing</a></h2>
+                            <h4 style="width:100%;margin:0">Trinity College, Dublin</h4>
+                            <h4 style="width:100%;margin:0">Sept '13 &#10140; Sept '14</h4>
+                        </div>
+                        <div class="container column flex7">
+                            <p style="width:100%;">
+                                My limited experience with computing software and hardware exploded over the next 12 months into the realms of parallel computing in C and C++
+                            </p>
+                            <p style="width:100%;">
+                                For my thesis, I designed and built a parallel solver for the "2D Lid Driven Cavity Flow" CFD problem
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container section">
-            <div class="container">
-                <span></span>
-                <div class="flex2 box">
-                    <h1>My education is one of a kind</h1>
-                    <p>A background in mathematics and physics has provided me with a unique 'first principles' method of approaching problem-solving. Applying this method to programming gives me a mental edge over other developers.</p>
+            <div class="container section column">
+                <div class="header1 container flex1 column">
+                    <div style="width:50%;text-align:left">
+                        <h1>But I've taught myself too</h1>
+                    </div>
                 </div>
-                <span></span>
+                <div class="header2 container flex1 column">
+                    <div style="width:100%;text-align:left">
+                        <p>
+                            In fact I've taught myself most of what I know. 
+                            Version control with git.
+                            Server management on Digital Ocean and CDN usage with Cloudflare.
+                            Deploying on Tomcat. Data with MySQL.
+                            Java in the back, HTML5, SCSS, AngularJS up front and everything REST-ing in between (see what I did there?)
+                        </p>                    
+                    </div>
+                </div>
+                <div class="container flex5 column" style="width:90%;">
+                    <div class="container row" style="width:100%">
+                        <span class="icon fa fa-rocket fa-5x flex2"></span>
+                        <div class="container column flex3" style="text-align:left">
+                            <h2 style="width:100%"><a href="https://www.flightclub.io/">Flight Club</a></h2>
+                            <h4 style="width:100%;margin:0">A simulator and trajectory visualiser for rocket launches and landings</h4>
+                        </div>
+                        <div class="container column flex7">
+                            <ul>
+                                <li>A Java+MySQL backend built with Maven and Hibernate, served on Apache Tomcat.</li>
+                                <li>An Angular Material frontend built with Gulp. </li>
+                                <li>Plots built with Plotly.js and flot.js. </li>
+                                <li>3D views built with Cesium.js. </li>
+                                <li>A RESTful API connecting everything together, using Google GSON to parse requests on the server.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="container">
-                <div class="box" style="max-width:30%">
-                    <span class="icon fa fa-superscript"></span>
-                    <h3><a href="http://www.tcd.ie/Physics/undergraduate/theoretical/">B.A. Theoretical Physics</a></h3>
-                    <h5>Sept '09 &#10140; June '13</h5>
-                    <p>4 years in Trinity College, Dublin earned me a Bachelor's degree and a Non-Foundation Scholarship - putting me in the top 2% of academics in the University.</p>
+            <div class="container section column">
+                <div class="header1 container flex1 column">
+                    <div style="width:50%;text-align:left">
+                        <h1>Give us a buzz</h1>
+                    </div>
                 </div>
-                <div class="box" style="max-width:30%">
-                    <span class="icon fa fa-code"></span>
-                    <h3><a href="http://www.maths.tcd.ie/hpcmsc/index.php">MSc. High Performance Computing</a></h3>
-                    <h5>Sept '13 &#10140; Sept '14</h5>
-                    <p>My limited experience with computing software and hardware exploded over the next 12 months into the realms of parallel computing in C and C++.</p>
+                <div class="header2 container flex1 column">
+                    <div style="width:100%;text-align:left">
+                        <p>There's a plethora of ways you can contact me, so there's no excuse.</p>     
+                    </div>
+                </div>
+                <div class="container flex5 column" style="width:90%;">
+                    <div class="container row" style="width:100%">
+                        <button href="https://github.com/murphd37" class="icon fa fa-github"><span class="label">Github</span></button>
+                        <button href="https://www.linkedin.com/pub/declan-murphy/87/457/b92" class="icon fa fa-linkedin"><span class="label">LinkedIn</span></button>
+                    </div>
                 </div>
             </div>
         </div>

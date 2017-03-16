@@ -10,7 +10,18 @@ html {
 
 body {
   margin: 0px;
-  width: 100% !important; }
+  width: 100% !important;
+  background-color: #a62631; }
+
+.header1 {
+  width: 100%;
+  background-color: #e2838b; }
+
+.header2 {
+  width: 50%; }
+
+::-webkit-scrollbar {
+  display: none; }
 
 .container {
   display: flex;
@@ -24,37 +35,35 @@ body {
   flex-flow: column nowrap; }
 
 .section {
-  height: 100vh;
-  width: 100%; }
+  height: -webkit-calc(100vh - 5vw);
+  height: -moz-calc(100vh - 5vw);
+  height: calc(100vh - 5vw);
+  width: 95vw;
+  margin: 2.5vw; }
 
-.section:nth-child(even) {
-  color: #00ffea;
-  background-color: #b54a53; }
-  .section:nth-child(even) .box {
-    text-align: center;
-    border: solid #3bc4b9;
-    border-radius: 5%; }
-
-.section:nth-child(odd) {
-  color: #ff0015;
-  background-color: #55aaa3; }
-  .section:nth-child(odd) .box {
-    text-align: center;
-    border: solid #d62937;
-    border-radius: 5%; }
+.section {
+  color: #1a1a1a;
+  background-color: #e6e6e6; }
+  .section a:link, .section a:hover {
+    color: #a62631; }
+  .section a:visited {
+    color: #26a69b; }
+  .section a:focus, .section a:active {
+    color: #83e2da; }
 
 .icon {
-  font-size: 5em; }
+  color: #30cfc2; }
 
 .center {
   text-align: center; }
 
 #lander {
+  color: #1a1a1a;
   font-size: 1.5em;
   flex-direction: row; }
 
 .profiler {
-  content: url("../images/profile2.jpg");
+  content: url("../images/profile3.jpg");
   border-radius: 50%;
   max-width: 100%; }
 

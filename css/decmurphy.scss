@@ -61,8 +61,17 @@ $second-color: complement($first-color);
 
 $mixed1: harmoniousMix($first-color, $second-color);
 $mixed2: harmoniousMix($second-color, $first-color);
-$neutral1: mixNeutral($mixed1);
-$neutral2: mixNeutral($mixed2);
+
+$neutral1: mixNeutral($first-color);
+$neutral1Light: lighten($neutral1, 20%);
+$neutral1Dark: darken($neutral1, 10%);
+
+$neutral2: mixNeutral($second-color);
+$neutral2Light: lighten($neutral2, 20%);
+$neutral2Dark: darken($neutral2, 10%);
+
+$white: darken(rgb(255,255,255), 10%);
+$black: lighten(rgb(0,0,0), 10%);
 
 @font-face {
     font-family: 'Brandon Grotesque';
@@ -78,6 +87,17 @@ html {
 body {
     margin: 0px;
     width: 100% !important;
+    background-color: $neutral1Dark;
+}
+.header1 {
+    width: 100%;
+    background-color: $neutral1Light;
+}
+.header2 {
+    width: 50%;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 .container {
     display: flex;
@@ -93,30 +113,23 @@ body {
 }
 
 .section {
-    height: 100vh;
-    width: 100%;
+    height: -webkit-calc(100vh - 5vw);
+    height:    -moz-calc(100vh - 5vw);
+    height:         calc(100vh - 5vw);
+    width: 95vw;
+    margin:2.5vw;
 }
-.section:nth-child(even) {
-    color:$second-color;
-    background-color:$neutral2;
-    .box {
-        text-align:center;
-        border: solid $mixed1;
-        border-radius: 5%;
-    }
-}
-.section:nth-child(odd) {
-    color:$first-color;
-    background-color:$neutral1;
-    .box {
-        text-align:center;
-        border: solid $mixed2;
-        border-radius: 5%;
-    }
+.section {
+    color:$black;
+    background-color:$white;
+    
+    a:link, a:hover {color:$neutral1Dark;}
+    a:visited {color:$neutral2Dark;}
+    a:focus, a:active {color:$neutral2Light;}
 }
 
 .icon {
-    font-size: 5em;
+    color: $neutral2;
 }
 
 .center {
@@ -124,12 +137,13 @@ body {
 }
 
 #lander {
+    color: $black;
     font-size: 1.5em;
     flex-direction: row;
 }
 
 .profiler {
-    content:url("../images/profile2.jpg");
+    content:url("../images/profile3.jpg");
     border-radius: 50%;
     max-width: 100%;
 }
